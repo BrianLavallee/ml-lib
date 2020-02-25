@@ -77,3 +77,24 @@ def load_bank():
         convert_categorical(train, test, attr)
 
     return train, train_labels, test, test_labels
+
+def load_concrete():
+    train = []
+    train_labels = []
+    with open("./data/concrete/train.csv", "r") as f:
+        for line in f:
+            item = line.strip().split(",")
+            item = [float(x) for x in item]
+            train.append(item[:-1])
+            train_labels.append(item[-1])
+
+    test = []
+    test_labels = []
+    with open("./data/concrete/test.csv", "r") as f:
+        for line in f:
+            item = line.strip().split(",")
+            item = [float(x) for x in item]
+            test.append(item[:-1])
+            test_labels.append(item[-1])
+
+    return train, train_labels, test, test_labels
