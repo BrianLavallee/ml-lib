@@ -14,7 +14,7 @@ def count(labels):
 class DecisionTree:
 
     def __init__(self, train, labels, attributes=None, measure=entropy, max_depth=-1):
-        attributes = attributes == None ? range(len(train[0])) : attributes
+        attributes = range(len(train[0])) if attributes == None else attributes
         if count(labels) < 2:
             self.leaf = True
             self.label = labels[0]
