@@ -73,8 +73,8 @@ def load_bank():
     for attr in [0, 5, 9, 11, 12, 13, 14]:
         convert_numeric(train, test, attr)
 
-    for attr in [1, 3, 8, 15]:
-        convert_categorical(train, test, attr)
+    # for attr in [1, 3, 8, 15]:
+    #     convert_categorical(train, test, attr)
 
     return train, train_labels, test, test_labels
 
