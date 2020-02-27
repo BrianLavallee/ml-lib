@@ -5,10 +5,10 @@ from .tree import WeightedDecisionTree
 class AdaBoost:
     def __init__(self, x, y):
         w = [1] * len(x)
-
+        self.T = 1000
         self.votes = []
         self.stumps = []
-        for i in range(1000):
+        for i in range(self.T):
             s = WeightedDecisionTree(x, y, w, max_depth=1)
             self.stumps.append(s)
 
@@ -28,10 +28,10 @@ class AdaBoost:
                 else:
                     w[j] *= math.e ** -a
 
-    def predict(self, x, k=1000):
+    def predict(self, x):
         yes = 0
         no = 0
-        for i in range(k):
+        for i in range(self.T):
             if self.stumps[i].predict(x) == "yes":
                 yes += self.votes[i]
             else:
