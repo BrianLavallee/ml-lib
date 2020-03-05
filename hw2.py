@@ -29,7 +29,7 @@ def linear():
     plt.plot(x, y)
     plt.ylabel("error")
     plt.xlabel("iterations")
-    plt.savefig("lms.png")
+    plt.savefig("figures/lms.png")
     plt.clf()
 
     model = LinearRegressor(train, train_labels, 1)
@@ -42,7 +42,7 @@ def linear():
     plt.plot(x, y)
     plt.ylabel("error")
     plt.xlabel("iterations")
-    plt.savefig("lms_stoc.png")
+    plt.savefig("figures/lms_stoc.png")
     plt.clf()
 
     model = ExactLinearRegressor(train, train_labels)
@@ -66,7 +66,7 @@ def adaboost():
     plt.ylabel("error")
     plt.xlabel("T")
     plt.legend()
-    plt.savefig("stump_error.png")
+    plt.savefig("figures/stump_error.png")
     plt.clf()
 
     x = []
@@ -83,7 +83,7 @@ def adaboost():
     plt.ylabel("error")
     plt.xlabel("T")
     plt.legend()
-    plt.savefig("adaboost_error.png")
+    plt.savefig("figures/adaboost_error.png")
     plt.clf()
 
 def bagging():
@@ -104,7 +104,7 @@ def bagging():
     plt.ylabel("error")
     plt.xlabel("T")
     plt.legend()
-    plt.savefig("bagging6_error.png")
+    plt.savefig("figures/bagging6_error.png")
     plt.clf()
 
 def main():
