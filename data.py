@@ -98,3 +98,24 @@ def load_concrete():
             test_labels.append(item[-1])
 
     return train, train_labels, test, test_labels
+
+def load_banknote():
+    x_train = []
+    y_train = []
+    with open("./data/bank-note/train.csv", "r") as f:
+        for line in f:
+            item = line.strip().split(",")
+            item = [float(x) for x in item]
+            x_train.append(item[:-1])
+            y_train.append(2 * item[-1] - 1)
+
+    x_test = []
+    y_test = []
+    with open("./data/bank-note/test.csv", "r") as f:
+        for line in f:
+            item = line.strip().split(",")
+            item = [float(x) for x in item]
+            x_test.append(item[:-1])
+            y_test.append(2 * item[-1] - 1)
+
+    return x_train, y_train, x_test, y_test
