@@ -32,3 +32,12 @@ model = LinearRegressor(train, train_labels)
 
 To change the batch size, use the parameter `batch_size`.
 The default setting is -1 which sets `batch_size` to n_samples.
+
+## Perceptron
+To create a perceptron classifier, call
+```python
+model = Perceptron(x_train, y_train)
+```
+
+There are no additional parameters to set.
+You may create a ```VotingPerceptron``` or an ```AveragingPerceptron``` in the same way.
