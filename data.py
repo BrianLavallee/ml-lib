@@ -107,7 +107,8 @@ def load_banknote():
             item = line.strip().split(",")
             item = [float(x) for x in item]
             x_train.append(item[:-1])
-            y_train.append(2 * item[-1] - 1)
+            # y_train.append(2 * item[-1] - 1)
+            y_train.append(item[-1])
 
     x_test = []
     y_test = []
@@ -116,6 +117,7 @@ def load_banknote():
             item = line.strip().split(",")
             item = [float(x) for x in item]
             x_test.append(item[:-1])
-            y_test.append(2 * item[-1] - 1)
+            # y_test.append(2 * item[-1] - 1)
+            y_test.append(item[-1])
 
     return x_train, y_train, x_test, y_test
