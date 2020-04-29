@@ -41,3 +41,11 @@ model = Perceptron(x_train, y_train)
 
 There are no additional parameters to set.
 You may create a ```VotingPerceptron``` or an ```AveragingPerceptron``` in the same way.
+
+## SVM
+To create a support vector machine, call
+```python
+model = SVM(x_train, y_train)
+```
+
+You may additionally control the hyper-parameter C and the learning schedule gamma with keyword arguments.
