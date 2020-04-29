@@ -49,3 +49,23 @@ model = SVM(x_train, y_train)
 ```
 
 You may additionally control the hyper-parameter C and the learning schedule gamma with keyword arguments.
+
+## Logistic Regression
+To create logistic regression classifier, call
+```python
+model = LogisticRegression(x_train, y_train)
+```
+
+By default, it will run maximum a posteriori estimation, but you can run maximum likelihood estimation by setting map=False.
+To change the regularization parameter, set prior.
+Smaller values regularize more.
+
+## Neural Network
+To create neural network, call
+```python
+model = NeuralNet(x_train, y_train)
+```
+
+This creates a feed forward network with 2 hidden layers with a default width of 5.
+You can change the width by setting the width parameter.
+All nodes in the hidden layers and the output layer use sigmoid activation.
